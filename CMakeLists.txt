@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 3.16.3)
 
 project(seriallib VERSION 0.0.1 LANGUAGES CXX)
-set(CXX_CMAKE_STANDARD 20)
-set(CXX_CMAKE_STANDARD_REQUIRED ON)
+set (CMAKE_CXX_STANDARD 20)
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "GNU")
     if(CMAKE_SYSTEM MATCHES "Linux")
@@ -15,3 +14,4 @@ endif()
 
 
 add_library(seriallib ./lib/serialib.cpp ./lib/serialib.h)
+target_include_directories(seriallib PUBLIC ./lib/)
